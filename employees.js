@@ -106,7 +106,7 @@ class Manager extends Employee{
     } 
 
     addEmployee=(emp)=> {
-        this.name === String;
+        employeeName = '';
         this.employees.push('');
         
     }
@@ -148,12 +148,15 @@ manager.getEmployees()
 */
 
 //CODE HERE 
+const manager2 = new Manager('Coach', 'weekend nights', ['Austin', 'Rose', 'Lily'])
 
+/*
 const manager2={
-    name : 'Greg',
+    name : 'Coach',
     shift : 'weekend nights',
     employees : ['Austin', 'Rose', 'Lily']
 }
+*/
 console.log(manager2.employees)
 
 /*
@@ -162,4 +165,4 @@ console.log(manager2.employees)
     that an employee was added.
 */
 //CODE HERE
-
+manager2.employees
