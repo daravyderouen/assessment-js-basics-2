@@ -216,5 +216,9 @@ console.log(filteredByProperty(7))
 
     You'll have to console.log to see the filtered array
 */
-
-//CODE HERE
+/*
+filteredByProperty.keys(filteredByProperty).
+  filter((key) => key.includes('Name')).
+  reduce((cur, key) => { return filteredByProperty.filteredByProperty(cur, { [key]: filteredByProperty[key] })}, {});
+  
+  console.log(filteredByProperty) */
