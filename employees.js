@@ -101,7 +101,7 @@ class Manager extends Employee{
     }
 
     getEmployees () {
-        console.log(this.name,`manages`,this.employees,`.`);
+        console.log(this.name,`manages`,this.employees,``);
 
     } 
 
@@ -131,7 +131,7 @@ class Manager extends Employee{
 
 //CODE HERE
 
-const manager = new Manager ('Winston', 'weekday afternoons', ['Rachel', 'Heather'])
+const manager = new Manager ('Winston', 'weekday afternoons', ['Rachel','Heather'])
 
 /*
     Call the `getEmployees` method on the
