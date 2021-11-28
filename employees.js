@@ -27,6 +27,7 @@ class Employee {
 }
     getSchedule (){
         console.log(this.name,`works on`,this.shifts,`.`)
+        return (this.name,`works on`,this.shifts,`.`)
     }
 }
 
@@ -41,7 +42,7 @@ class Employee {
 */
 
 //CODE HERE
-let empOne = new Employee('Steven', ' weekday nights')
+let empOne = new Employee('Steven', 'week nights')
 /*
     Call the `getSchedule` method on the
     `empOne` object.
@@ -101,14 +102,15 @@ class Manager extends Employee{
     }
 
     getEmployees () {
-        console.log(this.name,`manages`,this.employees,``);
+        console.log(this.name,`manages`,this.employees);
+        return (this.name,`manages`,this.employees)
 
     } 
 
     addEmployee=(emp)=> {
-        employeeName = '';
-        this.employees.push('');
-        
+        let empName = `${name}`
+        console.log(this.name,`manages`,this.employees.push(`${names}`))
+        return (getEmployees.push(empName));
     }
 
 }            
@@ -148,6 +150,7 @@ manager.getEmployees()
 */
 
 //CODE HERE 
+manager.getEmployees()
 const manager2 = new Manager('Coach', 'weekend nights', ['Austin', 'Rose', 'Lily'])
 
 /*
@@ -165,4 +168,4 @@ console.log(manager2.employees)
     that an employee was added.
 */
 //CODE HERE
-manager2.employees
+manager2.getEmployees()

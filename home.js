@@ -96,12 +96,13 @@ console.log(canWeDeliver(85205))
 
 // CODE HERE
 const canWeDeliverTwo =(zipCodes)=>{
-    if(zipCodes= deliveryAreaZipCodes.includes(deliveryAreaZipCodes.length)){
+    if(zipCodes = 85203 && 85213 && zipCodes <= 85206 ){
         console.log(`You\'re in our delivery zone.`)
     } else {
         console.log(`Sorry we can\'t deliver to that address.`)
     }
 }
+
 canWeDeliverTwo(90000)
 //////////////////PROBLEM 3////////////////////
 /* 
@@ -137,10 +138,20 @@ const deals = [
 */
 
 //CODE HERE
-let theDealis = "15%"
-let newDeal = theDealis.replace("15%", "10%")
+let strDeal = deals[0].title.replace("15%", "10%")
+console.log(strDeal)
+//deals.title = '30% off!';
 
-console.log(newDeal)
+//let results = strD.replace("15", "10")
+
+//console.log(results)
+
+//console.log(deals.title)
+
+
+
+
+
 
 /*
     The restaurant is going to continue its
@@ -156,7 +167,12 @@ console.log(newDeal)
 */
 
 //CODE HERE
+/*
 let monthlyDeal = '   This deal lasts until the end of March! '
 let nextMonth = monthlyDeal.replace('March', 'April')
 let monthlyDealString = nextMonth.trim()
 console.log(monthlyDealString)
+*/
+let str = deals[1].desc.replace("March", "April")
+
+console.log(str)

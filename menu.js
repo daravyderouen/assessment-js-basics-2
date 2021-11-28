@@ -102,14 +102,55 @@ console.log(`The price of the Asian Cajun is $ ${price} dollars.`)
 
 //CODE HERE
 
-const foodArr = {
-        name : "Mesquite Heat",
+const foodArr = [
+{
+        name : "Mesquite Heat Wings",
         price : 12,
         category : 'appetizer',
         popularity : 8,
         rating : 9,
-        tags : ['spicy', 'Southern', 'homecooked']
+        tags : 'spicy',
+         
+},
+{
+    name : "McCheesy Mac & Cheese",
+    price : 8,
+    category : 'appetizer',
+    popularity : 6,
+    rating : 7,
+    tags : 'cheesy',
+     
+},
+{
+    name : "Crawfish Boil Pizza",
+    price : 18,
+    category : 'entree',
+    popularity : 8,
+    rating : 9,
+    tags : 'Southern',
+     
+},
+{
+    name : "Pepperoni ParadisePizza",
+    price : 15,
+    category : 'entree',
+    popularity : 10,
+    rating : 10,
+    tags : 'cheesy',
+     
+},
+{
+    name : "Bourbon Bread Pudding",
+    price : 6,
+    category : 'dessert',
+    popularity : 10,
+    rating : 10,
+    tags :'Southern',
+     
 }
+
+
+]
 
 
 
@@ -130,18 +171,13 @@ const foodArr = {
 
 //CODE HERE
 
-const obj =foodArr.tags
-
+let filteredTag = foodArr.filter(function(food) { return food.tags == 'cheesy';
+});
 //console.log(Object.values(obj));
 //const arrayLikeObj1 ={obj}
 //console.log(foodArr.tags)
 
-const filterdFood = () => {
-     (obj === '')
-        return obj
-    
-}
-console.log(filterdFood(obj))
+console.log(filteredTag)
 
 //////////////////PROBLEM 5////////////////////
 /* 
@@ -186,27 +222,6 @@ console.log(filterdFood(obj))
 
 
 
-const filteredByProperty = (property, Number, type) => {
-     const filteredFood ={
-        property : "string",
-        number : Number ,
-        type : "above" || 'below',
-        
-     }
-};
-
-const filterdFood2 = (Number,type) => {
-  if(Number > 5) (type === 'above')
-  {
-      return Object.filterdFood
-      
-   console.log(filterdFood2(7))
-  //} else {
-  //    (num < 10)
-    //  return [].filterdFood
-  }
-}
-console.log(filteredByProperty(7))
 
 
 
@@ -216,9 +231,4 @@ console.log(filteredByProperty(7))
 
     You'll have to console.log to see the filtered array
 */
-/*
-filteredByProperty.keys(filteredByProperty).
-  filter((key) => key.includes('Name')).
-  reduce((cur, key) => { return filteredByProperty.filteredByProperty(cur, { [key]: filteredByProperty[key] })}, {});
-  
-  console.log(filteredByProperty) */
+

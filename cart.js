@@ -34,29 +34,9 @@ const cart = [
 ]
 
 //CODE HERE
+let total = cart.reduce((sum, f) => sum + f.price, 0);
 
-
-const higherFunction = (arr, cb) =>{
-    let results = arr.map((element, index, array)=> {
-        return cb(element.price)
-        //cb()//children can always see the information of the parent but the parent can't see info of the children
-    })
-    return results
-}
-
-const calculateFinal = (parseInt) => {
-    let reducer = cart.reduce(price.Math.floor)
-    return reducer
-}
-let results = higherFunction(cart, calculateFinal)
-
-console.log(higherFunction(calculateFinal))
-
-//const summedPrice = cart.reduce(function (parseInt, currentValue){
-    //return parseInt+ currentValue;
-//});
-
-
+console.log(total)
 
 //////////////////PROBLEM 2////////////////////
 /*  
@@ -74,25 +54,13 @@ console.log(higherFunction(calculateFinal))
 */
 
 //CODE HERE
-const calcFinalPrice = (arr, cb) =>{
-    let results = arr.map((element, index, array)=> {
-        return cb(element.cartTotal, element.couponValue, element.tax)
-        
-    })
-    return results
+
+function calcFinalPrice(cartTotal, couponValue, tax) {
+    totalPrice=(cartTotal-couponValue)+(cartTotal*(tax*100))
+    return totalPrice
 }
 
 
-const calculateBill = (price, taxRate, coupon) => {
-
-     let tax = price * taxRate
-     //console.log(price * taxRate)
-     return (price + tax) - coupon
-}
-
-let results = calculateFinalPrice(cart, calculateBill)
-
-console.log(results)
 //////////////////PROBLEM 3////////////////////
 /*  
     In this problem, you'll create a model for 
@@ -113,16 +81,32 @@ console.log(results)
     Your object should have at least 4 properties. 
 */
 
+class Customers { 
+    constructor(customerName, phoneNumber, orderNumber, customerRating){
+    this.customerName= customerName,
+    this.phoneNumber = phoneNumber,
+    this.orderNumber = orderNumber,
+    this.customerRating = customerRating
+    
+}
+}
+
+//Each customer will have their own name, phone number, order number, and customer rating according to their own object. Each property describes that customer details. 
+
+
 
 
 /*
     TEXT ANSWER HERE
 */
+let customerName = "The name customer provides whether they call in the order or comes in to dine."
 
-const type = 'We offer 3 different types of Bella Vida Wines available to purchase: white, red & sparkling. Our wines are unlike the rest! It is rich with sweetness that is backed by fruity, ripe flavors.',
-const pricePerBottle ='Each Bella Vida Wine bottle is $35. However, we are running a Halloween deal! Buy 2 for $60 and save more money!',
-const typeOfCraftsmanship ='We take great pride in our Bella Vida Wines. Our wines are locally crafted at our family vineyard made here in America. Supporting the American dream & keeping it local. We also do not use any pesticides or GMO products on our vineyard and factory.',
-const customersComments = 'We have received nothing but raved reviews about our Bella Vida Wines such as it is full, pleasant & well rounded. Where is your second bottle you ask? Why we have that in stock and waiting for you to pick it up today!'
+let phoneNumber = "The phone number the customer provides that is associated with the object phoneNumber in our data system."
+
+let orderNumber = "The customer's order number that we can track it's status throughout the process in our database whether the back is working on it or it's done or has been served."
+
+let customerRating = "The rating the customer provides for us whether is about the food or the quality in our service, or even our facility itself."
+
 
 /*
     Now, create a customer object following your own
@@ -131,10 +115,10 @@ const customersComments = 'We have received nothing but raved reviews about our 
 
 //CODE HERE
 
-const bellaVidaWinesTheory = {
-    typeof : ['White', 'Red', 'Sparkling'],
-    pricePerBottle : 35, 
-    typeOfCraftsmanship :'Organic & local vineyard',
-    customersComments : ['full', 'pleasant', 'sweet & well rounded', 'Where\s my second bottle?']
-};
+let customer1 = {
+    customerName : 'Ben',
+    phoneNumber : 3333333333,
+    orderNumber : 34,
+    customerRating : 8,
+}
 

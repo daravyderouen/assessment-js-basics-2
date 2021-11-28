@@ -40,12 +40,13 @@ class Tickets  {
         
     };
 
-    updateStatus=(newStatus)=>{
-        newStatus = this.status;
+    updateStatus=(str)=>{
+        let newStatus = Tickets.status;
     } 
       
     getStatus () {
         console.log(`The order for` ,this.customerID,`is now`, this.status,`.`) 
+        return Tickets.status
     }
     
     }    //const results = () =>{
@@ -54,11 +55,13 @@ class Tickets  {
     
     
 
-    let ticket1 = new Tickets( 'pizza, bread', 7, 44, 345, 'done')
+    let ticket1 = new Tickets('pizza, bread', 7, 44, 345, 'done');
         
-    const {status: ticket1Status}=ticket1
-    const {customerID: ticket1CustomerID}=ticket1
-  ticket1.getStatus()
+ticket1.status = "done"
+ticket1.getStatus()  
+//console.log(ticket1.status)
+    
+  
 
     //}
 //let phrase = updateStatus(results)
@@ -76,12 +79,10 @@ class Tickets  {
 
 //CODE HERE
 
-const firstTicket = {
-    items : 'Asian Cajun Pizza, Bella Noche Lasgna, bruschettta',
-    orderTime : 7,
-    customerID : 335,
-    status : 'cooking'
-}
+let firstTicket = new Tickets(
+'Asian Cajun Pizza, Bella Noche Lasgna, bruschettta', 8, 7,335,'waiting'
+
+);
 
 
 /*
@@ -92,6 +93,8 @@ const firstTicket = {
 
 //CODE HERE
 
-//const { status: secondTicketStatus}= secondTicket
+firstTicket.status = "cooking"
+//console.log(firstTicket.status)
 
-console.log(firstTicket.status)
+firstTicket.getStatus()
+//console.log(firstTicket.status)
