@@ -221,9 +221,14 @@ console.log(filteredTag)
 //CODE HERE
 
 
+const filterByProperty =  (rating,price, popularity) => {
+  let result = foodArr.map((rating, price, popularity) => {return (foodArr.rating,foodArr.price,foodArr.popularity > 5)
+    })
+    return result
+}
 
 
-
+filterByProperty(foodArr)
 
 /*
     Invoke the `filterByProperty` function passing
